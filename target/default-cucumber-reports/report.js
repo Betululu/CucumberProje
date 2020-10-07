@@ -1,97 +1,333 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/walmart.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/koalapalace.feature");
 formatter.feature({
-  "name": "Walmart Urun Arama",
+  "name": "Koala Palace",
   "description": "",
   "keyword": "Feature",
   "tags": [
     {
-      "name": "@walmart"
+      "name": "@koalapalace"
     }
   ]
 });
-formatter.scenarioOutline({
-  "name": "TC08_kullanici walmartta urun arar",
+formatter.background({
+  "name": "Koala Palace Admin Giris",
   "description": "",
-  "keyword": "Scenario Outline"
-});
-formatter.step({
-  "name": "kullanici \"https://walmart.com\" sayfasina gider",
-  "keyword": "Given "
-});
-formatter.step({
-  "name": "kullanici walmart aramakutusuna \"\u003ckelime\u003e\" yazar ve arar",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "kullanici walmart sonuc sayisini ekrana yazdirir",
-  "keyword": "Then "
-});
-formatter.examples({
-  "name": "Test Verileri",
-  "description": "",
-  "keyword": "Examples",
-  "rows": [
-    {
-      "cells": [
-        "kelime"
-      ]
-    },
-    {
-      "cells": [
-        "desk"
-      ]
-    },
-    {
-      "cells": [
-        "ball"
-      ]
-    },
-    {
-      "cells": [
-        "toys"
-      ]
-    }
-  ]
-});
-formatter.scenario({
-  "name": "TC08_kullanici walmartta urun arar",
-  "description": "",
-  "keyword": "Scenario Outline",
-  "tags": [
-    {
-      "name": "@walmart"
-    }
-  ]
+  "keyword": "Background"
 });
 formatter.before({
   "status": "passed"
 });
 formatter.step({
-  "name": "kullanici \"https://walmart.com\" sayfasina gider",
+  "name": "kullanici koalapalace admin sayfasina gider",
   "keyword": "Given "
 });
 formatter.match({
-  "location": "stepdefinitions.EbayStepDefinitions.kullanici_sayfasina_gider(java.lang.String)"
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_koalapalace_admin_sayfasina_gider()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "kullanici walmart aramakutusuna \"desk\" yazar ve arar",
+  "name": "kullanici kullaniciadi ve sifresini girer",
   "keyword": "And "
 });
 formatter.match({
-  "location": "stepdefinitions.WalmartStepDefinitions.kullanici_walmart_aramakutusuna_yazar_ve_arar(java.lang.String)"
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_kullaniciadi_ve_sifresini_girer()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "kullanici walmart sonuc sayisini ekrana yazdirir",
+  "name": "kullanici giris islemini gerceklestirir",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "stepdefinitions.WalmartStepDefinitions.kullanici_walmart_sonuc_sayisini_ekrana_yazdirir()"
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_giris_islemini_gerceklestirir()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "TC09_kullanici bilgileri girerek hotel olusturur",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@koalapalace"
+    },
+    {
+      "name": "@hotelcreate"
+    }
+  ]
+});
+formatter.step({
+  "name": "kullanici hotelcreate sayfasina gider",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_hotelcreate_sayfasina_gider()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici hotelcreate code bolumune \"1234\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_hotelcreate_code_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici hotelcreate name bolumune \"test\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_hotelcreate_name_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici hotelcreate adress bolumune \"cikmaz sokak\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_hotelcreate_adress_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici hotelcreate phone bolumune \"0539123456\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_hotelcreate_phone_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici hotelcreate email bolumune \"hamza@tech.com\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_hotelcreate_email_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici hotelcreate idgroup bolumunde \"Hotel Type1\" secer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_hotelcreate_idgroup_bolumunde_secer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici hotelcreate save butonuna tiklar",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_hotelcreate_save_butonuna_tiklar()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici hotelcreate kayit islemini assert eder",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_hotelcreate_kayit_islemini_assert_eder()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici driveri kapatir",
+  "keyword": "Then "
+});
+formatter.match({});
+formatter.result({
+  "status": "undefined"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.background({
+  "name": "Koala Palace Admin Giris",
+  "description": "",
+  "keyword": "Background"
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici koalapalace admin sayfasina gider",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_koalapalace_admin_sayfasina_gider()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici kullaniciadi ve sifresini girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_kullaniciadi_ve_sifresini_girer()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici giris islemini gerceklestirir",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_giris_islemini_gerceklestirir()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "TC10_kullanici bilgleri girerek hotel room olusturur",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@koalapalace"
+    },
+    {
+      "name": "@hotelroomcreate"
+    }
+  ]
+});
+formatter.step({
+  "name": "kullanici hotelroomcreate sayfasina gider",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_hotelroomcreate_sayfasina_gider()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici hotelroomcreate idhotel bolumunde \"Star\" secer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_hotelroomcreate_idhotel_bolumunde_secer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici hotelroomcreate code bolumune \"12345\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_hotelroomcreate_code_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici hotelroomcreate name bolumune \"Techproed\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_hotelroomcreate_name_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici hotelroomcreate location bolumune \"USA\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_hotelroomcreate_location_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici hotelroomcreate description bolumune \"ne yazik ki aciklama yok\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_hotelroomcreate_description_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici hotelroomcreate price bolumune fiyat girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_hotelroomcreate_price_bolumune_fiyat_girer()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici hotelroomcreate roomtype bolumunde \"Single\" secer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_hotelroomcreate_roomtype_bolumunde_secer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici hotelroomcreate maxadult bolumune \"2\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_hotelroomcreate_maxadult_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici hotelroomcreate maxchildren bolumune \"3\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_hotelroomcreate_maxchildren_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici hotelroomcreate save butonuna tiklar",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_hotelroomcreate_save_butonuna_tiklar()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici hotelroomcreate kayit islemini assert eder",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_hotelroomcreate_kayit_islemini_assert_eder()"
 });
 formatter.result({
   "status": "passed"
@@ -99,45 +335,193 @@ formatter.result({
 formatter.after({
   "status": "passed"
 });
-formatter.scenario({
-  "name": "TC08_kullanici walmartta urun arar",
+formatter.background({
+  "name": "Koala Palace Admin Giris",
   "description": "",
-  "keyword": "Scenario Outline",
-  "tags": [
-    {
-      "name": "@walmart"
-    }
-  ]
+  "keyword": "Background"
 });
 formatter.before({
   "status": "passed"
 });
 formatter.step({
-  "name": "kullanici \"https://walmart.com\" sayfasina gider",
+  "name": "kullanici koalapalace admin sayfasina gider",
   "keyword": "Given "
 });
 formatter.match({
-  "location": "stepdefinitions.EbayStepDefinitions.kullanici_sayfasina_gider(java.lang.String)"
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_koalapalace_admin_sayfasina_gider()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "kullanici walmart aramakutusuna \"ball\" yazar ve arar",
+  "name": "kullanici kullaniciadi ve sifresini girer",
   "keyword": "And "
 });
 formatter.match({
-  "location": "stepdefinitions.WalmartStepDefinitions.kullanici_walmart_aramakutusuna_yazar_ve_arar(java.lang.String)"
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_kullaniciadi_ve_sifresini_girer()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "kullanici walmart sonuc sayisini ekrana yazdirir",
+  "name": "kullanici giris islemini gerceklestirir",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "stepdefinitions.WalmartStepDefinitions.kullanici_walmart_sonuc_sayisini_ekrana_yazdirir()"
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_giris_islemini_gerceklestirir()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "TC11_kullanici bilgileri girerek room reservation olusturur",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@koalapalace"
+    },
+    {
+      "name": "@hotelreservationcreate"
+    }
+  ]
+});
+formatter.step({
+  "name": "kullanici hotelroomreservation sayfasina gider",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_hotelroomreservation_sayfasina_gider()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation iduser bolumunde \"manager2\" secer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_iduser_bolumunde_secer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation idhotelroom bolumunde \"Hilton\" secer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_idhotelroom_bolumunde_secer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation price bolumune \"500\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_price_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation datestart bolumune \"10/10/2020\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_datestart_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation dateend bolumune \"10/17/2020\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_dateend_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation adultamaount bolumune \"2\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_adultamaount_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation childrenamount bolumune \"3\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_childrenamount_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation namesurname bolumune \"Hamza Yılmaz\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_namesurname_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation phone bolumune \"0500600700\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_phone_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation email bolumune \"hamza@gmail.com\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_email_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation notes bolumune \"Testerlardan selam..\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_notes_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation save butonuna tiklar",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_save_butonuna_tiklar()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation kayit islemini assert eder",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_kayit_islemini_assert_eder()"
 });
 formatter.result({
   "status": "passed"
@@ -145,51 +529,2575 @@ formatter.result({
 formatter.after({
   "status": "passed"
 });
-formatter.scenario({
-  "name": "TC08_kullanici walmartta urun arar",
+formatter.background({
+  "name": "Koala Palace Admin Giris",
   "description": "",
-  "keyword": "Scenario Outline",
-  "tags": [
-    {
-      "name": "@walmart"
-    }
-  ]
+  "keyword": "Background"
 });
 formatter.before({
   "status": "passed"
 });
 formatter.step({
-  "name": "kullanici \"https://walmart.com\" sayfasina gider",
+  "name": "kullanici koalapalace admin sayfasina gider",
   "keyword": "Given "
 });
 formatter.match({
-  "location": "stepdefinitions.EbayStepDefinitions.kullanici_sayfasina_gider(java.lang.String)"
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_koalapalace_admin_sayfasina_gider()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "kullanici walmart aramakutusuna \"toys\" yazar ve arar",
+  "name": "kullanici kullaniciadi ve sifresini girer",
   "keyword": "And "
 });
 formatter.match({
-  "location": "stepdefinitions.WalmartStepDefinitions.kullanici_walmart_aramakutusuna_yazar_ve_arar(java.lang.String)"
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_kullaniciadi_ve_sifresini_girer()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "kullanici walmart sonuc sayisini ekrana yazdirir",
+  "name": "kullanici giris islemini gerceklestirir",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "stepdefinitions.WalmartStepDefinitions.kullanici_walmart_sonuc_sayisini_ekrana_yazdirir()"
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_giris_islemini_gerceklestirir()"
 });
 formatter.result({
-  "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\".result\\-summary\\-container\"}\n  (Session info: chrome\u003d85.0.4183.121)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027DESKTOP-ROESUB7\u0027, ip: \u0027192.168.1.23\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_251\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.121, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\\Users\\DELL\\AppData\\Local...}, goog:chromeOptions: {debuggerAddress: localhost:60347}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: 8601411baf6b4ad9c322b8c57ab6633c\n*** Element info: {Using\u003dclass name, value\u003dresult-summary-container}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByClassName(RemoteWebDriver.java:412)\r\n\tat org.openqa.selenium.By$ByClassName.findElement(By.java:389)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)\r\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)\r\n\tat com.sun.proxy.$Proxy16.getText(Unknown Source)\r\n\tat stepdefinitions.WalmartStepDefinitions.kullanici_walmart_sonuc_sayisini_ekrana_yazdirir(WalmartStepDefinitions.java:18)\r\n\tat ✽.kullanici walmart sonuc sayisini ekrana yazdirir(file:///C:/Users/DELL/IdeaProjects/CucumberProje/src/test/resources/features/walmart.feature:6)\r\n",
-  "status": "failed"
+  "status": "passed"
 });
-formatter.embedding("image/png", "embedded0.png", null);
+formatter.scenario({
+  "name": "TC23_kullanici hotellist sayfasinda code girerek hotel arar",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@koalapalace"
+    },
+    {
+      "name": "@hotelsearch"
+    }
+  ]
+});
+formatter.step({
+  "name": "kullanici hotellist sayfasina gider",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_hotellist_sayfasina_gider()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici hotellist code bolumune \"1234\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_hotellist_code_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici hotellist search butonuna tiklar",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_hotellist_search_butonuna_tiklar()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici hotellist bolumunundeki kayitlari inceler",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_hotellist_bolumunundeki_kayitlari_inceler()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.background({
+  "name": "Koala Palace Admin Giris",
+  "description": "",
+  "keyword": "Background"
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici koalapalace admin sayfasina gider",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_koalapalace_admin_sayfasina_gider()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici kullaniciadi ve sifresini girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_kullaniciadi_ve_sifresini_girer()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici giris islemini gerceklestirir",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_giris_islemini_gerceklestirir()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "TC24_kullanici hotelroomlist sayfasinda verileri girerek hotelroom arar",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@koalapalace"
+    },
+    {
+      "name": "@hotelroomsearch"
+    }
+  ]
+});
+formatter.step({
+  "name": "kullanici hotelroomlist sayfasina gider",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_hotelroomlist_sayfasina_gider()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici hotelroomlist idhotelbolumunde \"Star\" secer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_hotelroomlist_idhotelbolumunde_secer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici hotelroomlist code bolumune \"12345\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_hotelroomlist_code_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici hotelroomlist name bolumune \"Techproed\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_hotelroomlist_name_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici hotelroomlist location bolumune \"USA\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_hotelroomlist_location_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici hotelroomlist search butonuna tiklar",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_hotelroomlist_search_butonuna_tiklar()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici hotelroomlist bolumundeki kayitlari inceler",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_hotelroomlist_bolumundeki_kayitlari_inceler()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.background({
+  "name": "Koala Palace Admin Giris",
+  "description": "",
+  "keyword": "Background"
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici koalapalace admin sayfasina gider",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_koalapalace_admin_sayfasina_gider()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici kullaniciadi ve sifresini girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_kullaniciadi_ve_sifresini_girer()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici giris islemini gerceklestirir",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_giris_islemini_gerceklestirir()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "TC26_kullanici hotelreservationlist sayfasinda verileri girerek reservation arar",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@koalapalace"
+    },
+    {
+      "name": "@hotelreservationsearch"
+    }
+  ]
+});
+formatter.step({
+  "name": "kullanici hotelroomreservation sayfasina gider",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_hotelroomreservation_sayfasina_gider()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici hotelroomreservation hotelroomid bolumunde \"team06\" secer",
+  "keyword": "And "
+});
+formatter.match({});
+formatter.result({
+  "status": "undefined"
+});
+formatter.step({
+  "name": "kullanici hotelroomreservation arama kutusuna tiklar",
+  "keyword": "And "
+});
+formatter.match({});
+formatter.result({
+  "status": "undefined"
+});
+formatter.step({
+  "name": "kullanici hotelroomreservation kayitlarini inceler",
+  "keyword": "Then "
+});
+formatter.match({});
+formatter.result({
+  "status": "undefined"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.background({
+  "name": "Koala Palace Admin Giris",
+  "description": "",
+  "keyword": "Background"
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici koalapalace admin sayfasina gider",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_koalapalace_admin_sayfasina_gider()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici kullaniciadi ve sifresini girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_kullaniciadi_ve_sifresini_girer()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici giris islemini gerceklestirir",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_giris_islemini_gerceklestirir()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "TC27_kullanici hoteledit sayfasinda verileri girerek hotel bilgilerini gunceller",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@koalapalace"
+    },
+    {
+      "name": "@hoteledit"
+    }
+  ]
+});
+formatter.step({
+  "name": "kullanici hoteledit \"http://www.kaolapalace-qa-environment2.com/admin/HotelAdmin/Edit?Id\u003d4\" sayfasina gider",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_hoteledit_sayfasina_gider(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici hoteledit code bolumunu \"999\" ile gunceller",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_hoteledit_code_bolumunu_ile_gunceller(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici hoteledit name bolumunu \"sonDers\" ile gunceller",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_hoteledit_name_bolumunu_ile_gunceller(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici hoteledit adress bolumunu \"Cikmaz sk.\" ile gunceller",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_hoteledit_adress_bolumunu_ile_gunceller(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici hoteledit phone bolumunu \"0123456789\" ile gunceller",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_hoteledit_phone_bolumunu_ile_gunceller(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici hoteledit mail bolumunu \"sonders@son.com\" ile gunceller",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_hoteledit_mail_bolumunu_ile_gunceller(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici hoteledit save butonuna tiklar",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_hoteledit_save_butonuna_tiklar()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici hoteledit \"Hotel was updated successfully\" yazisini dogrular",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_hoteledit_yazisini_dogrular(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.background({
+  "name": "Koala Palace Admin Giris",
+  "description": "",
+  "keyword": "Background"
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici koalapalace admin sayfasina gider",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_koalapalace_admin_sayfasina_gider()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici kullaniciadi ve sifresini girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_kullaniciadi_ve_sifresini_girer()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici giris islemini gerceklestirir",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_giris_islemini_gerceklestirir()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "TC28_kullanici hotelroomedit sayfasinda properties bolumundeki veriyi siler",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@koalapalace"
+    },
+    {
+      "name": "@hotelroomeditsilindi"
+    },
+    {
+      "name": "@hotelroomedit"
+    }
+  ]
+});
+formatter.step({
+  "name": "kullanici hotelroomedit \"http://www.kaolapalace-qa-environment2.com/admin/HotelRoomAdmin/Edit?Id\u003d472\" sayfasina gider",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_hotelroomedit_sayfasina_gider(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici hotelroomedit sayfasinda properties bolumune tiklar",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_hotelroomedit_sayfasinda_properties_bolumune_tiklar()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici hotelroomedit sayfasinda tip olarak \"room prop1\" secer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_hotelroomedit_sayfasinda_tip_olarak_secer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici hotelroomedit sayfasinda code olarak \"4444\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_hotelroomedit_sayfasinda_code_olarak_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici hotelroomedit sayfasinda value olarak \"sistem bozuldu\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_hotelroomedit_sayfasinda_value_olarak_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici hotelroomedit sayfasinda save butonuna tiklar",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_hotelroomedit_sayfasinda_save_butonuna_tiklar()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici hotelroomedit sayfasinda properties bolumunde yeni kayit oldugunu assert eder",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_hotelroomedit_sayfasinda_properties_bolumunde_yeni_kayit_oldugunu_assert_eder()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.uri("file:src/test/resources/features/koalapalacenegatif.feature");
+formatter.feature({
+  "name": "Koala Palace",
+  "description": "",
+  "keyword": "Feature",
+  "tags": [
+    {
+      "name": "@koalapalace"
+    }
+  ]
+});
+formatter.background({
+  "name": "Koala Palace Admin Giris",
+  "description": "",
+  "keyword": "Background"
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici koalapalace admin sayfasina gider",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_koalapalace_admin_sayfasina_gider()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici kullaniciadi ve sifresini girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_kullaniciadi_ve_sifresini_girer()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici giris islemini gerceklestirir",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_giris_islemini_gerceklestirir()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "TC12_kullanici iduser secmeden room reservation olusturur",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@koalapalace"
+    },
+    {
+      "name": "@hotelreservationcreate"
+    },
+    {
+      "name": "@hotelreservationnegativetests"
+    },
+    {
+      "name": "@hotelreservationnegativetest1"
+    }
+  ]
+});
+formatter.step({
+  "name": "kullanici hotelroomreservation sayfasina gider",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_hotelroomreservation_sayfasina_gider()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation idhotelroom bolumunde \"Hilton\" secer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_idhotelroom_bolumunde_secer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation price bolumune \"500\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_price_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation datestart bolumune \"10/10/2020\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_datestart_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation dateend bolumune \"10/17/2020\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_dateend_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation adultamaount bolumune \"2\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_adultamaount_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation childrenamount bolumune \"3\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_childrenamount_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation namesurname bolumune \"Hamza Yılmaz\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_namesurname_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation phone bolumune \"0500600700\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_phone_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation email bolumune \"hamza@gmail.com\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_email_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation notes bolumune \"Testerlardan selam..\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_notes_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation save butonuna tiklar",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_save_butonuna_tiklar()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation kayit isleminin basarisiz oldugunu assert eder",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_kayit_isleminin_basarisiz_oldugunu_assert_eder()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.background({
+  "name": "Koala Palace Admin Giris",
+  "description": "",
+  "keyword": "Background"
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici koalapalace admin sayfasina gider",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_koalapalace_admin_sayfasina_gider()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici kullaniciadi ve sifresini girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_kullaniciadi_ve_sifresini_girer()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici giris islemini gerceklestirir",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_giris_islemini_gerceklestirir()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "TC13_kullanici idhotelroom secmeden room reservation olusturur",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@koalapalace"
+    },
+    {
+      "name": "@hotelreservationcreate"
+    },
+    {
+      "name": "@hotelreservationnegativetests"
+    },
+    {
+      "name": "@hotelreservationnegativetest2"
+    }
+  ]
+});
+formatter.step({
+  "name": "kullanici hotelroomreservation sayfasina gider",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_hotelroomreservation_sayfasina_gider()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation iduser bolumunde \"manager2\" secer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_iduser_bolumunde_secer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation price bolumune \"500\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_price_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation datestart bolumune \"10/10/2020\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_datestart_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation dateend bolumune \"10/17/2020\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_dateend_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation adultamaount bolumune \"2\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_adultamaount_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation childrenamount bolumune \"3\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_childrenamount_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation namesurname bolumune \"Hamza Yılmaz\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_namesurname_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation phone bolumune \"0500600700\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_phone_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation email bolumune \"hamza@gmail.com\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_email_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation notes bolumune \"Testerlardan selam..\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_notes_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation save butonuna tiklar",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_save_butonuna_tiklar()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation kayit isleminin basarisiz oldugunu assert eder",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_kayit_isleminin_basarisiz_oldugunu_assert_eder()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.background({
+  "name": "Koala Palace Admin Giris",
+  "description": "",
+  "keyword": "Background"
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici koalapalace admin sayfasina gider",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_koalapalace_admin_sayfasina_gider()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici kullaniciadi ve sifresini girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_kullaniciadi_ve_sifresini_girer()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici giris islemini gerceklestirir",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_giris_islemini_gerceklestirir()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "TC14_kullanici price secmeden room reservation olusturur",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@koalapalace"
+    },
+    {
+      "name": "@hotelreservationcreate"
+    },
+    {
+      "name": "@hotelreservationnegativetests"
+    },
+    {
+      "name": "@hotelreservationnegativetest3"
+    }
+  ]
+});
+formatter.step({
+  "name": "kullanici hotelroomreservation sayfasina gider",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_hotelroomreservation_sayfasina_gider()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation iduser bolumunde \"manager2\" secer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_iduser_bolumunde_secer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation idhotelroom bolumunde \"Hilton\" secer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_idhotelroom_bolumunde_secer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation datestart bolumune \"10/10/2020\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_datestart_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation dateend bolumune \"10/17/2020\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_dateend_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation adultamaount bolumune \"2\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_adultamaount_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation childrenamount bolumune \"3\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_childrenamount_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation namesurname bolumune \"Hamza Yılmaz\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_namesurname_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation phone bolumune \"0500600700\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_phone_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation email bolumune \"hamza@gmail.com\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_email_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation notes bolumune \"Testerlardan selam..\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_notes_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation save butonuna tiklar",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_save_butonuna_tiklar()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation kayit isleminin basarisiz oldugunu assert eder",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_kayit_isleminin_basarisiz_oldugunu_assert_eder()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.background({
+  "name": "Koala Palace Admin Giris",
+  "description": "",
+  "keyword": "Background"
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici koalapalace admin sayfasina gider",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_koalapalace_admin_sayfasina_gider()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici kullaniciadi ve sifresini girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_kullaniciadi_ve_sifresini_girer()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici giris islemini gerceklestirir",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_giris_islemini_gerceklestirir()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "TC15_kullanici datestart secmeden room reservation olusturur",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@koalapalace"
+    },
+    {
+      "name": "@hotelreservationcreate"
+    },
+    {
+      "name": "@hotelreservationnegativetests"
+    },
+    {
+      "name": "@hotelreservationnegativetest4"
+    }
+  ]
+});
+formatter.step({
+  "name": "kullanici hotelroomreservation sayfasina gider",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_hotelroomreservation_sayfasina_gider()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation iduser bolumunde \"manager2\" secer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_iduser_bolumunde_secer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation idhotelroom bolumunde \"Hilton\" secer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_idhotelroom_bolumunde_secer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation price bolumune \"500\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_price_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation dateend bolumune \"10/17/2020\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_dateend_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation adultamaount bolumune \"2\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_adultamaount_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation childrenamount bolumune \"3\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_childrenamount_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation namesurname bolumune \"Hamza Yılmaz\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_namesurname_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation phone bolumune \"0500600700\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_phone_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation email bolumune \"hamza@gmail.com\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_email_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation notes bolumune \"Testerlardan selam..\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_notes_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation save butonuna tiklar",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_save_butonuna_tiklar()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation kayit isleminin basarisiz oldugunu assert eder",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_kayit_isleminin_basarisiz_oldugunu_assert_eder()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.background({
+  "name": "Koala Palace Admin Giris",
+  "description": "",
+  "keyword": "Background"
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici koalapalace admin sayfasina gider",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_koalapalace_admin_sayfasina_gider()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici kullaniciadi ve sifresini girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_kullaniciadi_ve_sifresini_girer()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici giris islemini gerceklestirir",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_giris_islemini_gerceklestirir()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "TC16_kullanici dateend secmeden room reservation olusturur",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@koalapalace"
+    },
+    {
+      "name": "@hotelreservationcreate"
+    },
+    {
+      "name": "@hotelreservationnegativetests"
+    },
+    {
+      "name": "@hotelreservationnegativetest5"
+    }
+  ]
+});
+formatter.step({
+  "name": "kullanici hotelroomreservation sayfasina gider",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_hotelroomreservation_sayfasina_gider()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation iduser bolumunde \"manager2\" secer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_iduser_bolumunde_secer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation idhotelroom bolumunde \"Hilton\" secer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_idhotelroom_bolumunde_secer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation price bolumune \"500\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_price_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation datestart bolumune \"10/10/2020\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_datestart_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation adultamaount bolumune \"2\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_adultamaount_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation childrenamount bolumune \"3\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_childrenamount_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation namesurname bolumune \"Hamza Yılmaz\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_namesurname_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation phone bolumune \"0500600700\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_phone_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation email bolumune \"hamza@gmail.com\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_email_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation notes bolumune \"Testerlardan selam..\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_notes_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation save butonuna tiklar",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_save_butonuna_tiklar()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation kayit isleminin basarisiz oldugunu assert eder",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_kayit_isleminin_basarisiz_oldugunu_assert_eder()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.background({
+  "name": "Koala Palace Admin Giris",
+  "description": "",
+  "keyword": "Background"
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici koalapalace admin sayfasina gider",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_koalapalace_admin_sayfasina_gider()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici kullaniciadi ve sifresini girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_kullaniciadi_ve_sifresini_girer()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici giris islemini gerceklestirir",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_giris_islemini_gerceklestirir()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "TC17_kullanici adultamaount secmeden room reservation olusturur",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@koalapalace"
+    },
+    {
+      "name": "@hotelreservationcreate"
+    },
+    {
+      "name": "@hotelreservationnegativetests"
+    },
+    {
+      "name": "@hotelreservationnegativetest6"
+    }
+  ]
+});
+formatter.step({
+  "name": "kullanici hotelroomreservation sayfasina gider",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_hotelroomreservation_sayfasina_gider()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation iduser bolumunde \"manager2\" secer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_iduser_bolumunde_secer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation idhotelroom bolumunde \"Hilton\" secer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_idhotelroom_bolumunde_secer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation price bolumune \"500\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_price_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation datestart bolumune \"10/10/2020\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_datestart_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation dateend bolumune \"10/17/2020\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_dateend_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation childrenamount bolumune \"3\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_childrenamount_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation namesurname bolumune \"Hamza Yılmaz\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_namesurname_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation phone bolumune \"0500600700\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_phone_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation email bolumune \"hamza@gmail.com\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_email_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation notes bolumune \"Testerlardan selam..\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_notes_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation save butonuna tiklar",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_save_butonuna_tiklar()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation kayit isleminin basarisiz oldugunu assert eder",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_kayit_isleminin_basarisiz_oldugunu_assert_eder()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.background({
+  "name": "Koala Palace Admin Giris",
+  "description": "",
+  "keyword": "Background"
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici koalapalace admin sayfasina gider",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_koalapalace_admin_sayfasina_gider()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici kullaniciadi ve sifresini girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_kullaniciadi_ve_sifresini_girer()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici giris islemini gerceklestirir",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_giris_islemini_gerceklestirir()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "TC18_kullanici childrenamount secmeden room reservation olusturur",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@koalapalace"
+    },
+    {
+      "name": "@hotelreservationcreate"
+    },
+    {
+      "name": "@hotelreservationnegativetests"
+    },
+    {
+      "name": "@hotelreservationnegativetest7"
+    }
+  ]
+});
+formatter.step({
+  "name": "kullanici hotelroomreservation sayfasina gider",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_hotelroomreservation_sayfasina_gider()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation iduser bolumunde \"manager2\" secer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_iduser_bolumunde_secer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation idhotelroom bolumunde \"Hilton\" secer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_idhotelroom_bolumunde_secer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation price bolumune \"500\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_price_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation datestart bolumune \"10/10/2020\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_datestart_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation dateend bolumune \"10/17/2020\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_dateend_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation adultamaount bolumune \"2\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_adultamaount_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation namesurname bolumune \"Hamza Yılmaz\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_namesurname_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation phone bolumune \"0500600700\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_phone_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation email bolumune \"hamza@gmail.com\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_email_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation notes bolumune \"Testerlardan selam..\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_notes_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation save butonuna tiklar",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_save_butonuna_tiklar()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation kayit isleminin basarisiz oldugunu assert eder",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_kayit_isleminin_basarisiz_oldugunu_assert_eder()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.background({
+  "name": "Koala Palace Admin Giris",
+  "description": "",
+  "keyword": "Background"
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici koalapalace admin sayfasina gider",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_koalapalace_admin_sayfasina_gider()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici kullaniciadi ve sifresini girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_kullaniciadi_ve_sifresini_girer()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici giris islemini gerceklestirir",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_giris_islemini_gerceklestirir()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "TC19_kullanici namesurname secmeden room reservation olusturur",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@koalapalace"
+    },
+    {
+      "name": "@hotelreservationcreate"
+    },
+    {
+      "name": "@hotelreservationnegativetests"
+    },
+    {
+      "name": "@hotelreservationnegativetest8"
+    }
+  ]
+});
+formatter.step({
+  "name": "kullanici hotelroomreservation sayfasina gider",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_hotelroomreservation_sayfasina_gider()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation iduser bolumunde \"manager2\" secer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_iduser_bolumunde_secer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation idhotelroom bolumunde \"Hilton\" secer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_idhotelroom_bolumunde_secer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation price bolumune \"500\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_price_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation datestart bolumune \"10/10/2020\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_datestart_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation dateend bolumune \"10/17/2020\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_dateend_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation adultamaount bolumune \"2\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_adultamaount_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation childrenamount bolumune \"3\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_childrenamount_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation phone bolumune \"0500600700\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_phone_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation email bolumune \"hamza@gmail.com\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_email_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation notes bolumune \"Testerlardan selam..\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_notes_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation save butonuna tiklar",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_save_butonuna_tiklar()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation kayit isleminin basarisiz oldugunu assert eder",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_kayit_isleminin_basarisiz_oldugunu_assert_eder()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.background({
+  "name": "Koala Palace Admin Giris",
+  "description": "",
+  "keyword": "Background"
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici koalapalace admin sayfasina gider",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_koalapalace_admin_sayfasina_gider()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici kullaniciadi ve sifresini girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_kullaniciadi_ve_sifresini_girer()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici giris islemini gerceklestirir",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_giris_islemini_gerceklestirir()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "TC20_kullanici phone secmeden room reservation olusturur",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@koalapalace"
+    },
+    {
+      "name": "@hotelreservationcreate"
+    },
+    {
+      "name": "@hotelreservationnegativetests"
+    },
+    {
+      "name": "@hotelreservationnegativetest9"
+    }
+  ]
+});
+formatter.step({
+  "name": "kullanici hotelroomreservation sayfasina gider",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_hotelroomreservation_sayfasina_gider()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation iduser bolumunde \"manager2\" secer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_iduser_bolumunde_secer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation idhotelroom bolumunde \"Hilton\" secer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_idhotelroom_bolumunde_secer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation price bolumune \"500\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_price_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation datestart bolumune \"10/10/2020\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_datestart_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation dateend bolumune \"10/17/2020\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_dateend_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation adultamaount bolumune \"2\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_adultamaount_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation childrenamount bolumune \"3\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_childrenamount_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation namesurname bolumune \"Hamza Yılmaz\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_namesurname_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation email bolumune \"hamza@gmail.com\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_email_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation notes bolumune \"Testerlardan selam..\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_notes_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation save butonuna tiklar",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_save_butonuna_tiklar()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation kayit isleminin basarisiz oldugunu assert eder",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_kayit_isleminin_basarisiz_oldugunu_assert_eder()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.background({
+  "name": "Koala Palace Admin Giris",
+  "description": "",
+  "keyword": "Background"
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici koalapalace admin sayfasina gider",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_koalapalace_admin_sayfasina_gider()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici kullaniciadi ve sifresini girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_kullaniciadi_ve_sifresini_girer()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici giris islemini gerceklestirir",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_giris_islemini_gerceklestirir()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "TC21_kullanici email secmeden room reservation olusturur",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@koalapalace"
+    },
+    {
+      "name": "@hotelreservationcreate"
+    },
+    {
+      "name": "@hotelreservationnegativetests"
+    },
+    {
+      "name": "@hotelreservationnegativetest10"
+    }
+  ]
+});
+formatter.step({
+  "name": "kullanici hotelroomreservation sayfasina gider",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_hotelroomreservation_sayfasina_gider()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation iduser bolumunde \"manager2\" secer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_iduser_bolumunde_secer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation idhotelroom bolumunde \"Hilton\" secer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_idhotelroom_bolumunde_secer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation price bolumune \"500\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_price_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation datestart bolumune \"10/10/2020\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_datestart_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation dateend bolumune \"10/17/2020\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_dateend_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation adultamaount bolumune \"2\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_adultamaount_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation childrenamount bolumune \"3\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_childrenamount_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation namesurname bolumune \"Hamza Yılmaz\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_namesurname_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation phone bolumune \"0500600700\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_phone_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation notes bolumune \"Testerlardan selam..\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_notes_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation save butonuna tiklar",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_save_butonuna_tiklar()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici roomreservation kayit isleminin basarisiz oldugunu assert eder",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_roomreservation_kayit_isleminin_basarisiz_oldugunu_assert_eder()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.background({
+  "name": "Koala Palace Admin Giris",
+  "description": "",
+  "keyword": "Background"
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici koalapalace admin sayfasina gider",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_koalapalace_admin_sayfasina_gider()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici kullaniciadi ve sifresini girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_kullaniciadi_ve_sifresini_girer()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici giris islemini gerceklestirir",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_giris_islemini_gerceklestirir()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "TC25_kullanici hotellist sayfasinda code girerek hotel arar",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@koalapalace"
+    },
+    {
+      "name": "@hotelsearchnegative01"
+    }
+  ]
+});
+formatter.step({
+  "name": "kullanici hotellist sayfasina gider",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_hotellist_sayfasina_gider()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici hotellist code bolumune \"-10\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_hotellist_code_bolumune_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici hotellist search butonuna tiklar",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_hotellist_search_butonuna_tiklar()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici hotellist sonuc bolumunde kayit bulunamadi yazisini gorur",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_hotellist_sonuc_bolumunde_kayit_bulunamadi_yazisini_gorur()"
+});
+formatter.result({
+  "status": "passed"
+});
 formatter.after({
   "status": "passed"
 });

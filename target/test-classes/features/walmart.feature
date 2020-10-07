@@ -8,4 +8,4 @@ Feature: Walmart Urun Arama
       |kelime    |
       |desk      |
       |ball      |
-      |toys      |
+      |flower    |

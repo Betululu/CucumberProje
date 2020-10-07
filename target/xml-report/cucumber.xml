@@ -1,51 +1,317 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="117.641">
-<testcase classname="Walmart Urun Arama" name="TC08_kullanici walmartta urun arar" time="54.936">
-<system-out><![CDATA[Given kullanici "https://walmart.com" sayfasina gider.......................passed
-And kullanici walmart aramakutusuna "desk" yazar ve arar....................passed
-Then kullanici walmart sonuc sayisini ekrana yazdirir.......................passed
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="2" tests="19" time="662.675">
+<testcase classname="Koala Palace" name="TC09_kullanici bilgileri girerek hotel olusturur" time="48.395">
+<skipped><![CDATA[Given kullanici koalapalace admin sayfasina gider...........................passed
+And kullanici kullaniciadi ve sifresini girer...............................passed
+Then kullanici giris islemini gerceklestirir................................passed
+Given kullanici hotelcreate sayfasina gider.................................passed
+And kullanici hotelcreate code bolumune "1234" girer........................passed
+And kullanici hotelcreate name bolumune "test" girer........................passed
+And kullanici hotelcreate adress bolumune "cikmaz sokak" girer..............passed
+And kullanici hotelcreate phone bolumune "0539123456" girer.................passed
+And kullanici hotelcreate email bolumune "hamza@tech.com" girer.............passed
+And kullanici hotelcreate idgroup bolumunde "Hotel Type1" secer.............passed
+And kullanici hotelcreate save butonuna tiklar..............................passed
+Then kullanici hotelcreate kayit islemini assert eder.......................passed
+Then kullanici driveri kapatir..............................................undefined
+]]></skipped>
+</testcase>
+<testcase classname="Koala Palace" name="TC10_kullanici bilgleri girerek hotel room olusturur" time="42.806">
+<system-out><![CDATA[Given kullanici koalapalace admin sayfasina gider...........................passed
+And kullanici kullaniciadi ve sifresini girer...............................passed
+Then kullanici giris islemini gerceklestirir................................passed
+Given kullanici hotelroomcreate sayfasina gider.............................passed
+And kullanici hotelroomcreate idhotel bolumunde "Star" secer................passed
+And kullanici hotelroomcreate code bolumune "12345" girer...................passed
+And kullanici hotelroomcreate name bolumune "Techproed" girer...............passed
+And kullanici hotelroomcreate location bolumune "USA" girer.................passed
+And kullanici hotelroomcreate description bolumune "ne yazik ki aciklama yok" girer.passed
+And kullanici hotelroomcreate price bolumune fiyat girer....................passed
+And kullanici hotelroomcreate roomtype bolumunde "Single" secer.............passed
+And kullanici hotelroomcreate maxadult bolumune "2" girer...................passed
+And kullanici hotelroomcreate maxchildren bolumune "3" girer................passed
+And kullanici hotelroomcreate save butonuna tiklar..........................passed
+Then kullanici hotelroomcreate kayit islemini assert eder...................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Walmart Urun Arama" name="TC08_kullanici walmartta urun arar 2" time="26.308">
-<system-out><![CDATA[Given kullanici "https://walmart.com" sayfasina gider.......................passed
-And kullanici walmart aramakutusuna "ball" yazar ve arar....................passed
-Then kullanici walmart sonuc sayisini ekrana yazdirir.......................passed
+<testcase classname="Koala Palace" name="TC11_kullanici bilgileri girerek room reservation olusturur" time="35.143">
+<system-out><![CDATA[Given kullanici koalapalace admin sayfasina gider...........................passed
+And kullanici kullaniciadi ve sifresini girer...............................passed
+Then kullanici giris islemini gerceklestirir................................passed
+Given kullanici hotelroomreservation sayfasina gider........................passed
+And kullanici roomreservation iduser bolumunde "manager2" secer.............passed
+And kullanici roomreservation idhotelroom bolumunde "Hilton" secer..........passed
+And kullanici roomreservation price bolumune "500" girer....................passed
+And kullanici roomreservation datestart bolumune "10/10/2020" girer.........passed
+And kullanici roomreservation dateend bolumune "10/17/2020" girer...........passed
+And kullanici roomreservation adultamaount bolumune "2" girer...............passed
+And kullanici roomreservation childrenamount bolumune "3" girer.............passed
+And kullanici roomreservation namesurname bolumune "Hamza Yılmaz" girer.....passed
+And kullanici roomreservation phone bolumune "0500600700" girer.............passed
+And kullanici roomreservation email bolumune "hamza@gmail.com" girer........passed
+And kullanici roomreservation notes bolumune "Testerlardan selam.." girer...passed
+And kullanici roomreservation save butonuna tiklar..........................passed
+Then kullanici roomreservation kayit islemini assert eder...................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Walmart Urun Arama" name="TC08_kullanici walmartta urun arar 3" time="34.164">
-<failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.result\-summary\-container&quot;}&#10;  (Session info: chrome=85.0.4183.121)&#10;For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'DESKTOP-ROESUB7', ip: '192.168.1.23', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.121, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\DELL\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:60347}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}&#10;Session ID: 8601411baf6b4ad9c322b8c57ab6633c&#10;*** Element info: {Using=class name, value=result-summary-container}" type="org.openqa.selenium.NoSuchElementException"><![CDATA[Given kullanici "https://walmart.com" sayfasina gider.......................passed
-And kullanici walmart aramakutusuna "toys" yazar ve arar....................passed
-Then kullanici walmart sonuc sayisini ekrana yazdirir.......................failed
-
-StackTrace:
-org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".result\-summary\-container"}
-  (Session info: chrome=85.0.4183.121)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-ROESUB7', ip: '192.168.1.23', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.121, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\DELL\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:60347}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 8601411baf6b4ad9c322b8c57ab6633c
-*** Element info: {Using=class name, value=result-summary-container}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByClassName(RemoteWebDriver.java:412)
-	at org.openqa.selenium.By$ByClassName.findElement(By.java:389)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy16.getText(Unknown Source)
-	at stepdefinitions.WalmartStepDefinitions.kullanici_walmart_sonuc_sayisini_ekrana_yazdirir(WalmartStepDefinitions.java:18)
-	at ✽.kullanici walmart sonuc sayisini ekrana yazdirir(file:///C:/Users/DELL/IdeaProjects/CucumberProje/src/test/resources/features/walmart.feature:6)
-]]></failure>
+<testcase classname="Koala Palace" name="TC23_kullanici hotellist sayfasinda code girerek hotel arar" time="27.645">
+<system-out><![CDATA[Given kullanici koalapalace admin sayfasina gider...........................passed
+And kullanici kullaniciadi ve sifresini girer...............................passed
+Then kullanici giris islemini gerceklestirir................................passed
+Given kullanici hotellist sayfasina gider...................................passed
+And kullanici hotellist code bolumune "1234" girer..........................passed
+And kullanici hotellist search butonuna tiklar..............................passed
+Then kullanici hotellist bolumunundeki kayitlari inceler....................passed
+]]></system-out>
+</testcase>
+<testcase classname="Koala Palace" name="TC24_kullanici hotelroomlist sayfasinda verileri girerek hotelroom arar" time="36.233">
+<system-out><![CDATA[Given kullanici koalapalace admin sayfasina gider...........................passed
+And kullanici kullaniciadi ve sifresini girer...............................passed
+Then kullanici giris islemini gerceklestirir................................passed
+Given kullanici hotelroomlist sayfasina gider...............................passed
+And kullanici hotelroomlist idhotelbolumunde "Star" secer...................passed
+And kullanici hotelroomlist code bolumune "12345" girer.....................passed
+And kullanici hotelroomlist name bolumune "Techproed" girer.................passed
+And kullanici hotelroomlist location bolumune "USA" girer...................passed
+And kullanici hotelroomlist search butonuna tiklar..........................passed
+Then kullanici hotelroomlist bolumundeki kayitlari inceler..................passed
+]]></system-out>
+</testcase>
+<testcase classname="Koala Palace" name="TC26_kullanici hotelreservationlist sayfasinda verileri girerek reservation arar" time="25.152">
+<skipped><![CDATA[Given kullanici koalapalace admin sayfasina gider...........................passed
+And kullanici kullaniciadi ve sifresini girer...............................passed
+Then kullanici giris islemini gerceklestirir................................passed
+Given kullanici hotelroomreservation sayfasina gider........................passed
+And kullanici hotelroomreservation hotelroomid bolumunde "team06" secer.....undefined
+And kullanici hotelroomreservation arama kutusuna tiklar....................undefined
+Then kullanici hotelroomreservation kayitlarini inceler.....................undefined
+]]></skipped>
+</testcase>
+<testcase classname="Koala Palace" name="TC27_kullanici hoteledit sayfasinda verileri girerek hotel bilgilerini gunceller" time="27.27">
+<system-out><![CDATA[Given kullanici koalapalace admin sayfasina gider...........................passed
+And kullanici kullaniciadi ve sifresini girer...............................passed
+Then kullanici giris islemini gerceklestirir................................passed
+Given kullanici hoteledit "http://www.kaolapalace-qa-environment2.com/admin/HotelAdmin/Edit?Id=4" sayfasina gider.passed
+And kullanici hoteledit code bolumunu "999" ile gunceller...................passed
+And kullanici hoteledit name bolumunu "sonDers" ile gunceller...............passed
+And kullanici hoteledit adress bolumunu "Cikmaz sk." ile gunceller..........passed
+And kullanici hoteledit phone bolumunu "0123456789" ile gunceller...........passed
+And kullanici hoteledit mail bolumunu "sonders@son.com" ile gunceller.......passed
+And kullanici hoteledit save butonuna tiklar................................passed
+Then kullanici hoteledit "Hotel was updated successfully" yazisini dogrular.passed
+]]></system-out>
+</testcase>
+<testcase classname="Koala Palace" name="TC28_kullanici hotelroomedit sayfasinda properties bolumundeki veriyi siler" time="35.929">
+<system-out><![CDATA[Given kullanici koalapalace admin sayfasina gider...........................passed
+And kullanici kullaniciadi ve sifresini girer...............................passed
+Then kullanici giris islemini gerceklestirir................................passed
+Given kullanici hotelroomedit "http://www.kaolapalace-qa-environment2.com/admin/HotelRoomAdmin/Edit?Id=472" sayfasina gider.passed
+And kullanici hotelroomedit sayfasinda properties bolumune tiklar...........passed
+And kullanici hotelroomedit sayfasinda tip olarak "room prop1" secer........passed
+And kullanici hotelroomedit sayfasinda code olarak "4444" girer.............passed
+And kullanici hotelroomedit sayfasinda value olarak "sistem bozuldu" girer..passed
+And kullanici hotelroomedit sayfasinda save butonuna tiklar.................passed
+Then kullanici hotelroomedit sayfasinda properties bolumunde yeni kayit oldugunu assert eder.passed
+]]></system-out>
+</testcase>
+<testcase classname="Koala Palace" name="TC12_kullanici iduser secmeden room reservation olusturur" time="38.6">
+<system-out><![CDATA[Given kullanici koalapalace admin sayfasina gider...........................passed
+And kullanici kullaniciadi ve sifresini girer...............................passed
+Then kullanici giris islemini gerceklestirir................................passed
+Given kullanici hotelroomreservation sayfasina gider........................passed
+And kullanici roomreservation idhotelroom bolumunde "Hilton" secer..........passed
+And kullanici roomreservation price bolumune "500" girer....................passed
+And kullanici roomreservation datestart bolumune "10/10/2020" girer.........passed
+And kullanici roomreservation dateend bolumune "10/17/2020" girer...........passed
+And kullanici roomreservation adultamaount bolumune "2" girer...............passed
+And kullanici roomreservation childrenamount bolumune "3" girer.............passed
+And kullanici roomreservation namesurname bolumune "Hamza Yılmaz" girer.....passed
+And kullanici roomreservation phone bolumune "0500600700" girer.............passed
+And kullanici roomreservation email bolumune "hamza@gmail.com" girer........passed
+And kullanici roomreservation notes bolumune "Testerlardan selam.." girer...passed
+And kullanici roomreservation save butonuna tiklar..........................passed
+Then kullanici roomreservation kayit isleminin basarisiz oldugunu assert eder.passed
+]]></system-out>
+</testcase>
+<testcase classname="Koala Palace" name="TC13_kullanici idhotelroom secmeden room reservation olusturur" time="34.478">
+<system-out><![CDATA[Given kullanici koalapalace admin sayfasina gider...........................passed
+And kullanici kullaniciadi ve sifresini girer...............................passed
+Then kullanici giris islemini gerceklestirir................................passed
+Given kullanici hotelroomreservation sayfasina gider........................passed
+And kullanici roomreservation iduser bolumunde "manager2" secer.............passed
+And kullanici roomreservation price bolumune "500" girer....................passed
+And kullanici roomreservation datestart bolumune "10/10/2020" girer.........passed
+And kullanici roomreservation dateend bolumune "10/17/2020" girer...........passed
+And kullanici roomreservation adultamaount bolumune "2" girer...............passed
+And kullanici roomreservation childrenamount bolumune "3" girer.............passed
+And kullanici roomreservation namesurname bolumune "Hamza Yılmaz" girer.....passed
+And kullanici roomreservation phone bolumune "0500600700" girer.............passed
+And kullanici roomreservation email bolumune "hamza@gmail.com" girer........passed
+And kullanici roomreservation notes bolumune "Testerlardan selam.." girer...passed
+And kullanici roomreservation save butonuna tiklar..........................passed
+Then kullanici roomreservation kayit isleminin basarisiz oldugunu assert eder.passed
+]]></system-out>
+</testcase>
+<testcase classname="Koala Palace" name="TC14_kullanici price secmeden room reservation olusturur" time="33.572">
+<system-out><![CDATA[Given kullanici koalapalace admin sayfasina gider...........................passed
+And kullanici kullaniciadi ve sifresini girer...............................passed
+Then kullanici giris islemini gerceklestirir................................passed
+Given kullanici hotelroomreservation sayfasina gider........................passed
+And kullanici roomreservation iduser bolumunde "manager2" secer.............passed
+And kullanici roomreservation idhotelroom bolumunde "Hilton" secer..........passed
+And kullanici roomreservation datestart bolumune "10/10/2020" girer.........passed
+And kullanici roomreservation dateend bolumune "10/17/2020" girer...........passed
+And kullanici roomreservation adultamaount bolumune "2" girer...............passed
+And kullanici roomreservation childrenamount bolumune "3" girer.............passed
+And kullanici roomreservation namesurname bolumune "Hamza Yılmaz" girer.....passed
+And kullanici roomreservation phone bolumune "0500600700" girer.............passed
+And kullanici roomreservation email bolumune "hamza@gmail.com" girer........passed
+And kullanici roomreservation notes bolumune "Testerlardan selam.." girer...passed
+And kullanici roomreservation save butonuna tiklar..........................passed
+Then kullanici roomreservation kayit isleminin basarisiz oldugunu assert eder.passed
+]]></system-out>
+</testcase>
+<testcase classname="Koala Palace" name="TC15_kullanici datestart secmeden room reservation olusturur" time="33.897">
+<system-out><![CDATA[Given kullanici koalapalace admin sayfasina gider...........................passed
+And kullanici kullaniciadi ve sifresini girer...............................passed
+Then kullanici giris islemini gerceklestirir................................passed
+Given kullanici hotelroomreservation sayfasina gider........................passed
+And kullanici roomreservation iduser bolumunde "manager2" secer.............passed
+And kullanici roomreservation idhotelroom bolumunde "Hilton" secer..........passed
+And kullanici roomreservation price bolumune "500" girer....................passed
+And kullanici roomreservation dateend bolumune "10/17/2020" girer...........passed
+And kullanici roomreservation adultamaount bolumune "2" girer...............passed
+And kullanici roomreservation childrenamount bolumune "3" girer.............passed
+And kullanici roomreservation namesurname bolumune "Hamza Yılmaz" girer.....passed
+And kullanici roomreservation phone bolumune "0500600700" girer.............passed
+And kullanici roomreservation email bolumune "hamza@gmail.com" girer........passed
+And kullanici roomreservation notes bolumune "Testerlardan selam.." girer...passed
+And kullanici roomreservation save butonuna tiklar..........................passed
+Then kullanici roomreservation kayit isleminin basarisiz oldugunu assert eder.passed
+]]></system-out>
+</testcase>
+<testcase classname="Koala Palace" name="TC16_kullanici dateend secmeden room reservation olusturur" time="31.249">
+<system-out><![CDATA[Given kullanici koalapalace admin sayfasina gider...........................passed
+And kullanici kullaniciadi ve sifresini girer...............................passed
+Then kullanici giris islemini gerceklestirir................................passed
+Given kullanici hotelroomreservation sayfasina gider........................passed
+And kullanici roomreservation iduser bolumunde "manager2" secer.............passed
+And kullanici roomreservation idhotelroom bolumunde "Hilton" secer..........passed
+And kullanici roomreservation price bolumune "500" girer....................passed
+And kullanici roomreservation datestart bolumune "10/10/2020" girer.........passed
+And kullanici roomreservation adultamaount bolumune "2" girer...............passed
+And kullanici roomreservation childrenamount bolumune "3" girer.............passed
+And kullanici roomreservation namesurname bolumune "Hamza Yılmaz" girer.....passed
+And kullanici roomreservation phone bolumune "0500600700" girer.............passed
+And kullanici roomreservation email bolumune "hamza@gmail.com" girer........passed
+And kullanici roomreservation notes bolumune "Testerlardan selam.." girer...passed
+And kullanici roomreservation save butonuna tiklar..........................passed
+Then kullanici roomreservation kayit isleminin basarisiz oldugunu assert eder.passed
+]]></system-out>
+</testcase>
+<testcase classname="Koala Palace" name="TC17_kullanici adultamaount secmeden room reservation olusturur" time="37.066">
+<system-out><![CDATA[Given kullanici koalapalace admin sayfasina gider...........................passed
+And kullanici kullaniciadi ve sifresini girer...............................passed
+Then kullanici giris islemini gerceklestirir................................passed
+Given kullanici hotelroomreservation sayfasina gider........................passed
+And kullanici roomreservation iduser bolumunde "manager2" secer.............passed
+And kullanici roomreservation idhotelroom bolumunde "Hilton" secer..........passed
+And kullanici roomreservation price bolumune "500" girer....................passed
+And kullanici roomreservation datestart bolumune "10/10/2020" girer.........passed
+And kullanici roomreservation dateend bolumune "10/17/2020" girer...........passed
+And kullanici roomreservation childrenamount bolumune "3" girer.............passed
+And kullanici roomreservation namesurname bolumune "Hamza Yılmaz" girer.....passed
+And kullanici roomreservation phone bolumune "0500600700" girer.............passed
+And kullanici roomreservation email bolumune "hamza@gmail.com" girer........passed
+And kullanici roomreservation notes bolumune "Testerlardan selam.." girer...passed
+And kullanici roomreservation save butonuna tiklar..........................passed
+Then kullanici roomreservation kayit isleminin basarisiz oldugunu assert eder.passed
+]]></system-out>
+</testcase>
+<testcase classname="Koala Palace" name="TC18_kullanici childrenamount secmeden room reservation olusturur" time="34.207">
+<system-out><![CDATA[Given kullanici koalapalace admin sayfasina gider...........................passed
+And kullanici kullaniciadi ve sifresini girer...............................passed
+Then kullanici giris islemini gerceklestirir................................passed
+Given kullanici hotelroomreservation sayfasina gider........................passed
+And kullanici roomreservation iduser bolumunde "manager2" secer.............passed
+And kullanici roomreservation idhotelroom bolumunde "Hilton" secer..........passed
+And kullanici roomreservation price bolumune "500" girer....................passed
+And kullanici roomreservation datestart bolumune "10/10/2020" girer.........passed
+And kullanici roomreservation dateend bolumune "10/17/2020" girer...........passed
+And kullanici roomreservation adultamaount bolumune "2" girer...............passed
+And kullanici roomreservation namesurname bolumune "Hamza Yılmaz" girer.....passed
+And kullanici roomreservation phone bolumune "0500600700" girer.............passed
+And kullanici roomreservation email bolumune "hamza@gmail.com" girer........passed
+And kullanici roomreservation notes bolumune "Testerlardan selam.." girer...passed
+And kullanici roomreservation save butonuna tiklar..........................passed
+Then kullanici roomreservation kayit isleminin basarisiz oldugunu assert eder.passed
+]]></system-out>
+</testcase>
+<testcase classname="Koala Palace" name="TC19_kullanici namesurname secmeden room reservation olusturur" time="35.323">
+<system-out><![CDATA[Given kullanici koalapalace admin sayfasina gider...........................passed
+And kullanici kullaniciadi ve sifresini girer...............................passed
+Then kullanici giris islemini gerceklestirir................................passed
+Given kullanici hotelroomreservation sayfasina gider........................passed
+And kullanici roomreservation iduser bolumunde "manager2" secer.............passed
+And kullanici roomreservation idhotelroom bolumunde "Hilton" secer..........passed
+And kullanici roomreservation price bolumune "500" girer....................passed
+And kullanici roomreservation datestart bolumune "10/10/2020" girer.........passed
+And kullanici roomreservation dateend bolumune "10/17/2020" girer...........passed
+And kullanici roomreservation adultamaount bolumune "2" girer...............passed
+And kullanici roomreservation childrenamount bolumune "3" girer.............passed
+And kullanici roomreservation phone bolumune "0500600700" girer.............passed
+And kullanici roomreservation email bolumune "hamza@gmail.com" girer........passed
+And kullanici roomreservation notes bolumune "Testerlardan selam.." girer...passed
+And kullanici roomreservation save butonuna tiklar..........................passed
+Then kullanici roomreservation kayit isleminin basarisiz oldugunu assert eder.passed
+]]></system-out>
+</testcase>
+<testcase classname="Koala Palace" name="TC20_kullanici phone secmeden room reservation olusturur" time="33.795">
+<system-out><![CDATA[Given kullanici koalapalace admin sayfasina gider...........................passed
+And kullanici kullaniciadi ve sifresini girer...............................passed
+Then kullanici giris islemini gerceklestirir................................passed
+Given kullanici hotelroomreservation sayfasina gider........................passed
+And kullanici roomreservation iduser bolumunde "manager2" secer.............passed
+And kullanici roomreservation idhotelroom bolumunde "Hilton" secer..........passed
+And kullanici roomreservation price bolumune "500" girer....................passed
+And kullanici roomreservation datestart bolumune "10/10/2020" girer.........passed
+And kullanici roomreservation dateend bolumune "10/17/2020" girer...........passed
+And kullanici roomreservation adultamaount bolumune "2" girer...............passed
+And kullanici roomreservation childrenamount bolumune "3" girer.............passed
+And kullanici roomreservation namesurname bolumune "Hamza Yılmaz" girer.....passed
+And kullanici roomreservation email bolumune "hamza@gmail.com" girer........passed
+And kullanici roomreservation notes bolumune "Testerlardan selam.." girer...passed
+And kullanici roomreservation save butonuna tiklar..........................passed
+Then kullanici roomreservation kayit isleminin basarisiz oldugunu assert eder.passed
+]]></system-out>
+</testcase>
+<testcase classname="Koala Palace" name="TC21_kullanici email secmeden room reservation olusturur" time="35.097">
+<system-out><![CDATA[Given kullanici koalapalace admin sayfasina gider...........................passed
+And kullanici kullaniciadi ve sifresini girer...............................passed
+Then kullanici giris islemini gerceklestirir................................passed
+Given kullanici hotelroomreservation sayfasina gider........................passed
+And kullanici roomreservation iduser bolumunde "manager2" secer.............passed
+And kullanici roomreservation idhotelroom bolumunde "Hilton" secer..........passed
+And kullanici roomreservation price bolumune "500" girer....................passed
+And kullanici roomreservation datestart bolumune "10/10/2020" girer.........passed
+And kullanici roomreservation dateend bolumune "10/17/2020" girer...........passed
+And kullanici roomreservation adultamaount bolumune "2" girer...............passed
+And kullanici roomreservation childrenamount bolumune "3" girer.............passed
+And kullanici roomreservation namesurname bolumune "Hamza Yılmaz" girer.....passed
+And kullanici roomreservation phone bolumune "0500600700" girer.............passed
+And kullanici roomreservation notes bolumune "Testerlardan selam.." girer...passed
+And kullanici roomreservation save butonuna tiklar..........................passed
+Then kullanici roomreservation kayit isleminin basarisiz oldugunu assert eder.passed
+]]></system-out>
+</testcase>
+<testcase classname="Koala Palace" name="TC25_kullanici hotellist sayfasinda code girerek hotel arar" time="34.022">
+<system-out><![CDATA[Given kullanici koalapalace admin sayfasina gider...........................passed
+And kullanici kullaniciadi ve sifresini girer...............................passed
+Then kullanici giris islemini gerceklestirir................................passed
+Given kullanici hotellist sayfasina gider...................................passed
+And kullanici hotellist code bolumune "-10" girer...........................passed
+And kullanici hotellist search butonuna tiklar..............................passed
+Then kullanici hotellist sonuc bolumunde kayit bulunamadi yazisini gorur....passed
+]]></system-out>
 </testcase>
 </testsuite>
